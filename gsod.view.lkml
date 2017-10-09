@@ -167,9 +167,11 @@ view: gsod {
     drill_fields: []
   }
   measure: average {
+    sql: ${prcp} ;;
     type: average
   }
   measure: sum {
     type: sum
+
   }
 }
