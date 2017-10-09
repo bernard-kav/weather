@@ -37,6 +37,11 @@ view: stations2 {
     type: string
     sql: ${TABLE}.lon ;;
   }
+  dimension: geolocation {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${lon} ;;
+  }
 
   dimension: name {
     type: string
