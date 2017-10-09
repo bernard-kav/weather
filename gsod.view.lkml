@@ -166,10 +166,15 @@ view: gsod {
     type: count
     drill_fields: []
   }
-  measure: average {
+  measure: average_precipitation{
     sql: ${prcp} ;;
     type: average
   }
+  measure: average_max_temp{
+    sql: ${max} ;;
+    type: average
+  }
+
   measure: sum {
     type: sum
 
