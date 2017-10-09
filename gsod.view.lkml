@@ -166,4 +166,10 @@ view: gsod {
     type: count
     drill_fields: []
   }
+  measure: average {
+    type: average
+  }
+  measure: sum {
+    type: sum
+  }
 }
