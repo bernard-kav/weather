@@ -5,6 +5,6 @@ include: "*.view"
 
 # include all the dashboards
 include: "*.dashboard"
-explore: gsod1929 {}
+explore: gsod {}
 explore: stations {}
 explore: stations2{}

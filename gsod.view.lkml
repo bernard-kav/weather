@@ -1,5 +1,5 @@
-view: gsod1985 {
-  sql_table_name: `fh-bigquery.weather_gsod.gsod1985`
+view: gsod {
+  sql_table_name: `fh-bigquery.weather_gsod.gsod*`
     ;;
 
   dimension: count_dewp {
