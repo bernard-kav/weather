@@ -18,6 +18,7 @@ view: gsod {
   }
   dimension_group: actual_date {
     type: time
+    timeframes: [raw, date, month,year]
     sql: TIMESTAMP(CONCAT(year,'-',mo,'-',da));;
   }
 
