@@ -16,6 +16,10 @@ view: gsod {
     type: number
     sql: ${TABLE}.count_stp ;;
   }
+  dimension_group: actual_date {
+    type: time
+    sql: TIMESTAMP(CONCAT(year,'-',mo,'-',da));;
+  }
 
   dimension: count_temp {
     type: number
