@@ -1,5 +1,5 @@
 view: gsod {
-  sql_table_name: `fh-bigquery.weather_gsod.gsod*`
+  sql_table_name: `fh-bigquery.weather_gsod.gsod20*`
     ;;
 
   dimension: count_dewp {
@@ -179,6 +179,7 @@ view: gsod {
     sql: ${max} ;;
     type: average
   }
+
 
   measure: sum {
     type: sum
