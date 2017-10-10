@@ -158,7 +158,7 @@ view: gsod {
   }
 
   dimension: year {
-    type: date_time
+    type: string
     sql: ${TABLE}.year ;;
   }
 

@@ -5,6 +5,14 @@ include: "*.view"
 
 # include all the dashboards
 include: "*.dashboard"
-explore: gsod {}
+explore: gsod {
+  join: stations{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${gsod.stn} = ${stations.usaf};;
+
+  }
+
+}
 explore: stations {}
 explore: stations2{}
