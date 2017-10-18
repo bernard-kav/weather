@@ -11,12 +11,6 @@ explore: gsod {
     relationship: many_to_one
     sql_on: ${gsod.stn} = ${stations.usaf};;
   }
-  join: stations2 {
-    type: left_outer
-    relationship: one_to_one
-    sql_on: ${gsod.stn} = ${stations2.usaf} ;;
-  }
 
 }
 explore: stations {}
-explore: stations2{}

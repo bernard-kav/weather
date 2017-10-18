@@ -33,15 +33,20 @@ view: stations {
     sql: ${TABLE}.fips ;;
   }
 
-  dimension: lat {
-    type: number
-    sql: ${TABLE}.lat ;;
-  }
+    dimension: lat {
+      type: string
+      sql: ${TABLE}.lat ;;
+    }
 
-  dimension: lon {
-    type: number
-    sql: ${TABLE}.lon ;;
-  }
+    dimension: lon {
+      type: string
+      sql: ${TABLE}.lon ;;
+    }
+    dimension: geolocation {
+      type: location
+      sql_latitude: ${lat} ;;
+      sql_longitude: ${lon} ;;
+    }
 
   dimension: name {
     type: string
