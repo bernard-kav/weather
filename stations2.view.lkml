@@ -1,5 +1,5 @@
 view: stations2 {
-  sql_table_name: `fh-bigquery.weather_gsod.stations2`
+  sql_table_name: `fh-bigquery.weather_gsod.stations`
     ;;
 
   dimension: begin {

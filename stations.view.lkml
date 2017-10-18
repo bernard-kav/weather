@@ -62,6 +62,23 @@ view: stations {
     type: string
     sql: ${TABLE}.wban ;;
   }
+  dimension: stn_world_region {
+    type: string
+    sql: CASE
+    WHEN ${lat} >= 66.0  AND ${lat} <=90.0   THEN
+      "ARCTIC CIRCLE"
+    WHEN ${lat} >= 23.0  AND ${lat} < 66.0  THEN
+      "NORTHERN TEMPERATE ZONE - BETWEEN TROPIC OF CANCER & ARCTIC CIRCLE"
+    WHEN ${lat} >= 0.0   AND ${lat} < 23.0  THEN
+      "NORTHERN TROPICS - BETWEEN TROPIC OF CANCER & EQUATOR"
+    WHEN ${lat} >= -23.0 AND ${lat} < 0.0   THEN
+      "SOUTHERN TROPICS - BETWEEN TROPIC OF CAPRICORN & EQUATOR"
+    WHEN ${lat} >= -66.0 AND ${lat} < -23.0 THEN
+      "SOUTHERN TEMPERATE ZONE - BETWEEN TROPIC OF CAPRICORN & ANTARCTIC CIRCLE"
+    WHEN ${lat} >= -90.0 AND ${lat} < -66.0 THEN
+        "ANTARCTIC CIRCLE"
+        END;;
+  }
 
   measure: count {
     type: count
