@@ -37,7 +37,7 @@ view: gsod {
     WHEN ${actual_date_year} LIKE "199%" THEN "90S"
     WHEN ${actual_date_year} LIKE "200%" THEN "2000S"
     WHEN ${actual_date_year} LIKE "201%" THEN "2010S"
-  END AS DECADES ;;
+  END;;
   }
 
   dimension: count_temp {
